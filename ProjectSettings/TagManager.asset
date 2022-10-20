@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PlayerFollowCamera
+  - Monster
+  - CodePanel
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - WorldUI
+  - MiniUI
+  - Map
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 200818685
+    locked: 0
+  - name: Monster
+    uniqueID: 194481629
+    locked: 0
+  - name: Player
+    uniqueID: 1490858275
+    locked: 0
+  - name: MiniUI
+    uniqueID: 4204749031
+    locked: 0
+  - name: InteractObj
+    uniqueID: 4043579947
+    locked: 0
+  - name: Grass
+    uniqueID: 530347313
+    locked: 0
+  - name: Wall
+    uniqueID: 107609741
+    locked: 0
+  - name: WorldUI
+    uniqueID: 1143087153
+    locked: 0
+  - name: UI
+    uniqueID: 3614493839
+    locked: 0

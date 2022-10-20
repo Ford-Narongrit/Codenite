@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ConnectToServerScene.unity
+    guid: 04c8c89ed69cd0d48950ecc9090472e4
+  - enabled: 1
+    path: Assets/Scenes/LoginScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/HomeScene.unity
+    guid: de01a286addec234885191c1720ba40f
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: ace9b9004f3c21649a84124ade2f609c
+  - enabled: 1
+    path: Assets/Scenes/SelectModeScene.unity
+    guid: c2075d98f8498dc45b61fbfc40738884
+  - enabled: 1
+    path: Assets/Scenes/CreateRoomScene.unity
+    guid: 029b98082cb295b46b369b25a231d297
+  - enabled: 1
+    path: Assets/Scenes/RoomScene.unity
+    guid: 4cfdec5c1aa0e3847bce997424c5f95e
+  - enabled: 1
+    path: Assets/Scenes/PlayScene.unity
+    guid: 8adacd1d761cc9b42a811a6ca4f6f71b
+  - enabled: 1
+    path: Assets/Scenes/ConclusionScene.unity
+    guid: e189a4dc1e523a749a32227d40ff3df0
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 544b7925eff035446a40cd55ce0a98e6
+  m_configObjects: {}
