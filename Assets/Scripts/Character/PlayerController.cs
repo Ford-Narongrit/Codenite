@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviourPun, IDamageable
         {
             move();
             rotation();
-            udpateAnimation();
+            updateAnimation();
         }
     }
 
@@ -212,7 +212,7 @@ public class PlayerController : MonoBehaviourPun, IDamageable
     {
         Destroy(gameObject);
     }
-    public void udpateAnimation()
+    public void updateAnimation()
     {
         animator.SetFloat("Horizontal", lookDir.normalized.x);
         animator.SetFloat("Vertical", lookDir.normalized.y);
