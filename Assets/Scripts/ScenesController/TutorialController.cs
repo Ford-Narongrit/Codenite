@@ -22,7 +22,7 @@ public class TutorialController : MonoBehaviour
         GameObject monster = PhotonNetwork.Instantiate(MonsterPreFab.name, monsterSpawnPoint.position, monsterSpawnPoint.rotation);
         monster.GetComponent<MonsterController>().carryItem = "Hello world";
 
-        string[] dialogs = { "Use [W] [A] [S] [D] to move", "Use mouse1 to fire arrow.", "Use [F] to open code panel", "Goodluck have fun." };
+        string[] dialogs = { "Use [W] [A] [S] [D] to move", "Use mouse1 to fire arrow.", "Use [C] to open code panel", "Goodluck have fun." };
         DialogueController.Instance.showDialogue("HOW to play", dialogs);
     }
 

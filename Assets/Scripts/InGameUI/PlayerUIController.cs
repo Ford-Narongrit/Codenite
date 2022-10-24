@@ -33,7 +33,7 @@ public class PlayerUIController : MonoBehaviour
             worldMap.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             codePanel.SetActive(!codePanel.activeSelf);
         }
