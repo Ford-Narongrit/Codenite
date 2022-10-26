@@ -9,6 +9,8 @@ using TMPro;
 
 public class GameController : MonoBehaviourPunCallbacks
 {
+    [SerializeField] public GameObject howToSpectate;
+
     [Header("Player spawner")]
     [SerializeField] private GameObject playerPrefabs;
     [SerializeField] private Transform playerSpawnpoint;
@@ -75,9 +77,12 @@ public class GameController : MonoBehaviourPunCallbacks
             question.correctAnswer.ToList()
         );
 
+        howToSpectate.SetActive(false);
+
         if ((bool)PhotonNetwork.LocalPlayer.CustomProperties[PlayerProperty.IsSpectator] || (bool)PhotonNetwork.LocalPlayer.CustomProperties[PlayerProperty.IsEliminate])
         {
             player.GetPhotonView().RPC("destroy", RpcTarget.All);
+            howToSpectate.SetActive(true);
             uIController.IsSpectator = true;
         }
     }
@@ -168,7 +173,7 @@ public class GameController : MonoBehaviourPunCallbacks
             if (!teamNames.Contains(teamname))
             {
                 teamNames.Add(teamname);
-                if (!(bool)player.Value.CustomProperties[PlayerProperty.IsEliminate])
+                if (!(bool)player.Value.CustomProperties[PlayerProperty.IsEliminate] && !(bool)player.Value.CustomProperties[PlayerProperty.IsSpectator])
                 {
                     _qualifiedPlayer++;
                 }

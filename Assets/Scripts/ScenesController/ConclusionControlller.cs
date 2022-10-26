@@ -41,6 +41,10 @@ public class ConclusionControlller : MonoBehaviour
             Debug.Log("isfinalstage");
             isFinalstage = true;
         }
+        else if (isNoPlayerleft())
+        {
+            isFinalstage = true;
+        }
         else
         {
             loadNextLevel();
@@ -86,6 +90,22 @@ public class ConclusionControlller : MonoBehaviour
         ExitGames.Client.Photon.Hashtable customRoomProperties = new ExitGames.Client.Photon.Hashtable();
         customRoomProperties[RoomProperty.QuestionIndex] = (int)PhotonNetwork.CurrentRoom.CustomProperties[RoomProperty.QuestionIndex] + 1;
         PhotonNetwork.CurrentRoom.SetCustomProperties(customRoomProperties);
+    }
+
+    public bool isNoPlayerleft()
+    {
+        bool isLeft = true;
+        foreach (KeyValuePair<int, Player> player in PhotonNetwork.CurrentRoom.Players)
+        {
+            if ((bool)player.Value.CustomProperties[PlayerProperty.IsPass] || !(bool)player.Value.CustomProperties[PlayerProperty.IsEliminate])
+            {
+                if (!(bool)player.Value.CustomProperties[PlayerProperty.IsSpectator])
+                {
+                    isLeft = false;
+                }
+            }
+        }
+        return isLeft;
     }
 
     public void sendRoundData()
